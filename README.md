@@ -1,24 +1,64 @@
-# README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Userモデル
 
-Things you may want to cover:
+### usersテーブル
+#### user情報を置く
 
-* Ruby version
+|Column|Type|Options|
+|------|----|------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
 
-* System dependencies
+### Association
+- has_many :recipes
 
-* Configuration
 
-* Database creation
+## Recipeモデル
 
-* Database initialization
+### recipesテーブル
+#### レシピを保管する
 
-* How to run the test suite
+|Column|Type|Options|
+|------|----|------|
+|name|string|null: false|
+|howto1|string|null: false|
+|howto2|string|null: false|
+|howto3|string|null: false|
+|howto4|string||
+|howto5|string||
+|howto6|string||
+|howto7|string||
+|howto8|string||
+|howto9|string||
+|howto10|string||
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
+- belongs_to :user
+- belongs_to :category
+- has_many :images
 
-* Deployment instructions
+## Imageモデル
 
-* ...
+### imagesテーブル
+#### レシピ画像を保管する
+
+|Column|Type|Options|
+|------|----|------|
+|image|string||
+
+### Association
+- belongs_to :recipes
+
+## Categoryモデル
+
+### categoriesテーブル
+#### レシピのカテゴリーを保管する
+
+|Column|Type|Options|
+|------|----|------|
+|name|string||
+
+### Association
+- has_many :recipes
