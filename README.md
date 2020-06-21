@@ -5,7 +5,7 @@
 ### usersテーブル
 #### user情報を置く
 
-|Column|Type|Options|
+|o|Type|Options|
 |------|----|------|
 |name|string|null: false|
 |email|string|null: false|
