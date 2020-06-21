@@ -7,5 +7,20 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    
+    .header
+      My Cooking Memo
+      %ul.menus
+        = link_to "#" do
+          %li.menu トップ
+        = link_to "#" do
+          %li.menu 和食
+        = link_to "#" do
+          %li.menu 洋食
+        = link_to "#" do
+          %li.menu 一品もの
+        = link_to "#" do
+          %li.menu その他
+
   %body
     = yield
