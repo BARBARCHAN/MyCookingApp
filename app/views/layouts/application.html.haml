@@ -9,18 +9,24 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     
     .header
-      My Cooking Memo
+      .header-logo
+        My Cooking Memo
       %ul.menus
         = link_to "#" do
           %li.menu トップ
         = link_to "#" do
-          %li.menu 和食
+          %li.menu レシピ
         = link_to "#" do
-          %li.menu 洋食
+          %li.menu 新規投稿
         = link_to "#" do
-          %li.menu 一品もの
+          %li.menu マイページ
         = link_to "#" do
-          %li.menu その他
+          %li.menu ログイン
+        = link_to "#" do
+          %li.menu ログアウト
 
-  %body
+  .body
     = yield
+
+  .footer
+    Copyright My Cooking Memo 2020.
