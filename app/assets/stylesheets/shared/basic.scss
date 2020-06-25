@@ -1,14 +1,14 @@
 .header {
   background-color: #FFEF9D;
   width: 100vw;
-  height: 115px;
+  height: 90px;
   position: relative;
   // position: fixed;
   z-index: 500;
 
   .header-logo {
     text-align: center;
-    line-height: 115px;
+    line-height: 90px;
   }
 
   .menus {
@@ -17,7 +17,7 @@
     justify-content: center;
     background-color: #F8F0C9;
     width: 100vw;
-    height: 50px; 
+    height: 40px; 
 
     a {
       text-decoration: none;
@@ -27,7 +27,7 @@
     .menu {
       width: 100%;
       text-align: center;
-      line-height: 50px;
+      line-height: 40px;
       // border: 2px solid black;
       margin: 0 40px;
     }
@@ -38,7 +38,7 @@
   margin: 0 auto;
   background-color: #E0DBD3;
   width: 100vw;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 130px);
   overflow: scroll;
 }
 
