@@ -1,0 +1,42 @@
+.show {
+  padding-top: 60px;
+  text-align: center;
+  // font-weight: bold;
+  background-color: #C4C4C4;
+  width: 850px;
+  height: 100vh;
+  margin: auto;
+
+  .images {
+
+    .top-image {
+
+      .sample {
+        background-color: chartreuse;
+        height: 300px;
+        width: 500px;
+        margin: auto;
+      }
+    }
+
+    .low-image {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 90px;
+      
+      .sample2{
+        background-color: chartreuse;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  .text {
+    background-color: white;
+    width: 500px;
+    height: 100%;
+    padding-top: 30px;
+    margin: auto;
+  }
+}
