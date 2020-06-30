@@ -1,0 +1,45 @@
+.index {
+  padding-top: 100px;
+
+  .search-form {
+    text-align: center;
+
+    .search {
+      padding: 0 5px;
+    }
+
+    .btn {
+      background-color: #FFEF9D;
+    }
+  }
+
+  .list {
+    padding: 0 40px;
+
+    .upper-list {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+
+      .list {
+        height: 200px;
+        width: 200px;
+        background-color: #C4C4C4;
+        border: solid 1px #111111;
+      }
+    }    
+
+    .lower-list {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+
+      .list {
+        height: 200px;
+        width: 200px;
+        background-color: #C4C4C4;
+        border: solid 1px #111111;
+      }
+    }
+  }
+}

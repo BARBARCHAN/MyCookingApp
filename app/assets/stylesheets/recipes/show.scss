@@ -1,0 +1,88 @@
+.show {
+  padding-top: 60px;
+  // text-align: center;
+  // font-weight: bold;
+  background-color: #C4C4C4;
+  width: 850px;
+  height: 100vh;
+  margin: auto;
+  overflow: auto;
+
+  .images {
+
+    .top-image {
+
+      .sample {
+        background-color: chartreuse;
+        height: 300px;
+        width: 500px;
+        margin: auto;
+      }
+    }
+
+    .low-image {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 90px;
+      
+      .sample2{
+        background-color: chartreuse;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  .text {
+    background-color: white;
+    width: 670px;
+    height: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px 20px;
+
+    .title {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .separate-line {
+      border-bottom: solid 2px #FFEF9D;
+    }
+
+    .materials {
+      margin-bottom: 10px;
+      padding: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .material-list {
+      margin-bottom: 10px;
+
+      .material {
+        margin-bottom: 5px;
+      }
+    }
+
+    .recipe {
+      padding: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .references {
+      margin-bottom: 10px;
+    }
+
+    .howto {
+      margin-bottom: 5px;
+    }
+
+    .separate-line2 {
+      border-bottom: dotted 2px #FFEF9D;
+    }
+  }
+}

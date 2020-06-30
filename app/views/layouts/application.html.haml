@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MyCookingApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    
+    .header
+      .header-logo
+        My Cooking Memo
+      %ul.menus
+        = link_to root_path do
+          %li.menu トップ
+        = link_to "/recipes/1" do
+          %li.menu レシピ
+        = link_to new_recipe_path do
+          %li.menu 新規投稿
+        = link_to "#" do
+          %li.menu マイページ
+        = link_to "#" do
+          %li.menu ログイン
+        = link_to "#" do
+          %li.menu ログアウト
+
+  .body
+    = yield
+
+  .footer
+    Copyright My Cooking Memo 2020.

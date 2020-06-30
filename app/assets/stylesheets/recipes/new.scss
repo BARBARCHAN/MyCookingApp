@@ -1,0 +1,35 @@
+.new {
+  padding-top: 60px;
+  text-align: center;
+  // font-weight: bold;
+  background-color: #C4C4C4;
+  width: 850px;
+  height: 100vh;
+  margin: auto;
+  overflow: scroll;
+
+  .image {
+    background-color: #AEABAB;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    font-weight: normal;
+    line-height: 100px;
+  } 
+
+  .categories {
+
+    .category {
+      height: 30px;
+      width: 100px;
+    }
+  }
+
+  .send-btn {
+    .btn {
+      width: 300px;
+      height: 30px;
+      background-color: #FFEF9D;
+    }
+  }
+}

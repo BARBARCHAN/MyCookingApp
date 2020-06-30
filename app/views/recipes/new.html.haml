@@ -1,0 +1,53 @@
+.new
+  新しいレシピをどんどん投稿しよう！
+
+  %form
+    .image
+      -# %input.image-attached{:name => "file", :value => "画像を選択してください", :type => "file"}
+      画像をドラッグ＆ドロップで貼り付け
+    
+    .title
+      %br
+      レシピ名 必須
+      %br
+      %input.recipe-name{:name => "recipe-name", :type => "text", :size => "40", :placeholder => "レシピ名を入力してください"}
+    
+    %br
+
+    .categories
+      カテゴリーを選択してください 必須
+      %br
+      %select.category
+        %option{:value => "和食"} 和食
+        %option{:value => "洋食"} 洋食
+        %option{:value => "一品もの"} 一品もの
+        %option{:value => "スイーツ"} スイーツ
+    
+    %br
+
+    .material
+      必要な材料と分量を入力してください
+      %br
+      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "しょうゆ　大さじ２"}
+
+    %br
+
+    .howto
+      レシピを入力してください
+      %br
+      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方1"}
+      %br
+      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方2"}
+      %br
+      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方3"}
+      %br
+      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方4"}
+      %br
+      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方5"}
+    
+    %br
+
+    .send-btn
+      %input.btn{:name => "submit", :value => "登録する", :type => "submit"}
+
+
