@@ -1,0 +1,51 @@
+.sign_in-select {
+  padding-top: 60px;
+  background-color: #C4C4C4;
+  width: 850px;
+  height: 100vh;
+  margin: auto;
+  overflow: auto;
+
+  .menu {
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    .sign-up {
+      margin: auto;
+      background-color: red;
+      height: 50px;
+      width: 500px;
+      color: white;
+      font-size: 20px;
+      line-height: 50px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .login {
+      margin: auto;
+      background-color: blue;
+      height: 50px;
+      width: 500px;
+      color: white;
+      font-size: 20px;
+      line-height: 50px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .sns {
+      margin: auto;
+      background-color: green;
+      height: 50px;
+      width: 500px;
+      color: white;
+      font-size: 20px;
+      line-height: 50px;
+      border-radius: 10px;
+    }
+  }
+}
