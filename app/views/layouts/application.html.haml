@@ -15,15 +15,19 @@
         = link_to root_path do
           %li.menu トップ
         = link_to "/recipes/1" do
-          %li.menu レシピ
-        = link_to new_recipe_path do
-          %li.menu 新規投稿
-        = link_to "#" do
-          %li.menu マイページ
-        = link_to users_select_path do
-          %li.menu ログイン・ユーザー新規登録
-        = link_to destroy_user_session_path, method: :delete do
-          %li.menu ログアウト
+          %li.menu レシピを見る
+        - if user_signed_in?
+          = link_to new_recipe_path do
+            %li.menu 新規投稿
+          = link_to "#" do
+            %li.menu
+              = current_user.nickname
+          = link_to destroy_user_session_path, method: :delete do
+            %li.menu ログアウト
+        - else
+          = link_to users_select_path do
+            %li.menu ログイン・ユーザー新規登録
+        
 
   .body
     = yield
