@@ -6,6 +6,6 @@
     = link_to new_user_session_path do
       .login
         メールアドレスでログイン
-    = link_to "#" do
+    = link_to user_google_oauth2_omniauth_authorize_path, method: :post do
       .sns
-        SNSでログイン（準備中）
+        Googleでログイン（準備中）
