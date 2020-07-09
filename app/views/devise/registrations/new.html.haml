@@ -12,17 +12,20 @@
       = f.label :email, "メールアドレス"
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", class: "input-area"
-    .field
-      = f.label :password, "パスワード"
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} 文字以上入力してください)
-      %br/
-      = f.password_field :password, autocomplete: "new-password", class: "input-area"
-    .field
-      = f.label :password_confirmation, "もう１度パスワードを入力してください"
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password", class: "input-area"
+    - if @sns_id.present?
+      = hidden_field_tag :sns_auth, true
+    - else
+      .field
+        = f.label :password, "パスワード"
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} 文字以上入力してください)
+        %br/
+        = f.password_field :password, autocomplete: "new-password", class: "input-area"
+      .field
+        = f.label :password_confirmation, "もう１度パスワードを入力してください"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: "input-area"
     .actions
       = f.submit "新規登録", class: "submit-btn"
   = render "devise/shared/links"
