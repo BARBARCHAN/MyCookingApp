@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_08_222521) do
+ActiveRecord::Schema.define(version: 2020_07_09_225049) do
+
+  create_table "recipes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "category", null: false
+    t.text "material", null: false
+    t.text "howto1", null: false
+    t.text "howto2", null: false
+    t.text "howto3", null: false
+    t.text "howto4"
+    t.text "howto5"
+    t.text "howto6"
+    t.text "howto7"
+    t.text "howto8"
+    t.text "howto9"
+    t.text "howto10"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "provider", null: false
