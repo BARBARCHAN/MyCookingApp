@@ -6,6 +6,11 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
   end
 
+  def create
+    # binding.pry
+
+  end
+
   def show
   end
 end

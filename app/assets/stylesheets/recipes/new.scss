@@ -19,9 +19,15 @@
 
   .categories {
 
-    .category {
+    #recipe_category {
       height: 30px;
       width: 100px;
+    }
+  }
+
+  .howto {
+    label {
+      display: none;
     }
   }
 
