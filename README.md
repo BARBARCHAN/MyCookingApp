@@ -23,16 +23,16 @@
 |Column|Type|Options|
 |------|----|------|
 |name|string|null: false|
-|howto1|string|null: false|
-|howto2|string|null: false|
-|howto3|string|null: false|
-|howto4|string||
-|howto5|string||
-|howto6|string||
-|howto7|string||
-|howto8|string||
-|howto9|string||
-|howto10|string||
+|howto1|text|null: false|
+|howto2|text|null: false|
+|howto3|text|null: false|
+|howto4|text||
+|howto5|text||
+|howto6|text||
+|howto7|text||
+|howto8|text||
+|howto9|text||
+|howto10|text||
 
 ### Association
 - belongs_to :user

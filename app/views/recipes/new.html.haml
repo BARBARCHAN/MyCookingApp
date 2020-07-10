@@ -1,53 +1,54 @@
 .new
   新しいレシピをどんどん投稿しよう！
 
-  %form
+  = form_with model: @recipe, local: true do |f|
     .image
       -# %input.image-attached{:name => "file", :value => "画像を選択してください", :type => "file"}
       画像をドラッグ＆ドロップで貼り付け
     
     .title
       %br
-      レシピ名 必須
+      = f.label :name, "レシピ名 必須"
       %br
-      %input.recipe-name{:name => "recipe-name", :type => "text", :size => "40", :placeholder => "レシピ名を入力してください"}
+      = f.text_field :name, class: "recipe-name", size: "40", placeholder: "レシピ名を入力してください"
     
     %br
 
     .categories
-      カテゴリーを選択してください 必須
+      = f.label :category, "カテゴリーを選択してください 必須"
       %br
-      %select.category
-        %option{:value => "和食"} 和食
-        %option{:value => "洋食"} 洋食
-        %option{:value => "一品もの"} 一品もの
-        %option{:value => "スイーツ"} スイーツ
+      = f.select :category, [["和食", 0], ["洋食", 1],["おつまみ", 2],["スイーツ", 3]]
     
     %br
 
     .material
-      必要な材料と分量を入力してください
+      = f.label :material, "必要な材料と分量を入力してください 必須"
       %br
-      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "しょうゆ　大さじ２"}
+      = f.text_area :material, rows: "2", cols: "50", placeholder: "しょうゆ 大さじ２"
 
     %br
 
     .howto
       レシピを入力してください
       %br
-      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方1"}
+      = f.label :howto1
+      = f.text_area :howto1, rows: "2", cols: "50", placeholder: "レシピ1"
       %br
-      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方2"}
+      = f.label :howto2
+      = f.text_area :howto2, rows: "2", cols: "50", placeholder: "レシピ2"
       %br
-      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方3"}
+      = f.label :howto3
+      = f.text_area :howto3, rows: "2", cols: "50", placeholder: "レシピ3"
       %br
-      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方4"}
+      = f.label :howto4
+      = f.text_area :howto4, rows: "2", cols: "50", placeholder: "レシピ4"
       %br
-      %textarea.howto1{:name => "howto1", :rows => "2", :cols => "50", :placeholder => "作り方5"}
+      = f.label :howto5
+      = f.text_area :howto5, rows: "2", cols: "50", placeholder: "レシピ5"
     
     %br
 
     .send-btn
-      %input.btn{:name => "submit", :value => "登録する", :type => "submit"}
+      = f.submit "登録する", class: "btn"
 
 
