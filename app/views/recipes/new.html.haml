@@ -17,8 +17,6 @@
     .categories
       = f.label :category, "カテゴリーを選択してください 必須"
       %br
-      %select.category
-        %option{:value => "和食"} 和食
       = f.select :category, [["和食", 0], ["洋食", 1],["おつまみ", 2],["スイーツ", 3]]
     
     %br

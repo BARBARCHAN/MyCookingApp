@@ -1,0 +1,26 @@
+.create {
+  padding-top: 60px;
+  text-align: center;
+  // font-weight: bold;
+  background-color: #C4C4C4;
+  width: 850px;
+  height: 100vh;
+  margin: auto;
+  overflow: scroll;
+  size: 50px;
+
+  .return {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    line-height: 30px;
+    background-color: #FFEF9D;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

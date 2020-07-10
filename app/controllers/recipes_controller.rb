@@ -7,10 +7,24 @@ class RecipesController < ApplicationController
   end
 
   def create
-    # binding.pry
-
+    Recipe.create(recipe_params)
   end
 
   def show
+  end
+
+  private
+
+  def recipe_params
+    params.require(:recipe).permit(
+      :name,
+      :category,
+      :material,
+      :howto1,
+      :howto2,
+      :howto3,
+      :howto4,
+      :howto5
+    )
   end
 end
