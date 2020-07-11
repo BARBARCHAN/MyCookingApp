@@ -8,6 +8,12 @@ class RecipesController < ApplicationController
 
   def create
     Recipe.create(recipe_params)
+    # @image = Image.new(file_name: params[:file])
+    # if @image.save
+    #   render json: { message: "success", fileID: @image.id }, :status => 200
+    # else
+    #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
+    # end
   end
 
   def show
@@ -24,7 +30,8 @@ class RecipesController < ApplicationController
       :howto2,
       :howto3,
       :howto4,
-      :howto5
+      :howto5,
+      images:[]
     )
   end
 end

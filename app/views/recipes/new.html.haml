@@ -1,10 +1,11 @@
 .new
   新しいレシピをどんどん投稿しよう！
 
-  = form_with model: @recipe, local: true do |f|
-    .image
-      -# %input.image-attached{:name => "file", :value => "画像を選択してください", :type => "file"}
-      画像をドラッグ＆ドロップで貼り付け
+  = form_with model: @recipe, html: {multipart: true, class: "dropzone"}, local: true do |f|
+    .dropzone
+      .dz-message.needsclick
+      .fallback
+        = f.file_field :images
     
     .title
       %br
