@@ -8,14 +8,18 @@
   margin: auto;
   overflow: scroll;
 
-  .image {
+  .file_select {
+    width: 600px;
+    height: 300px;
     background-color: #AEABAB;
-    width: 500px;
-    height: 100px;
     margin: auto;
-    font-weight: normal;
-    line-height: 100px;
-  } 
+    // line-height: 300px;
+
+    #recipe_images {
+      // display: none;
+    }
+  
+  }
 
   .categories {
 

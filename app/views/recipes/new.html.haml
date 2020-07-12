@@ -1,12 +1,13 @@
 .new
   新しいレシピをどんどん投稿しよう！
 
-  = form_with model: @recipe, html: {multipart: true, class: "dropzone"}, local: true do |f|
-    .dropzone
-      .dz-message.needsclick
-      .fallback
-        = f.file_field :images
-    
+  = form_with model: @recipe, local: true do |f|
+    .file_select
+      = f.label :images, "クリックして画像を選択してください。（最大３枚アップロードできます）", class: "file_select_label"
+      = f.file_field :images, multiple: true
+      = f.file_field :images, multiple: true
+      = f.file_field :images, multiple: true
+  
     .title
       %br
       = f.label :name, "レシピ名 必須"
