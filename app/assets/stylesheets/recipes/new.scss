@@ -18,6 +18,16 @@
     #recipe_images {
       // display: none;
     }
+
+    .preview {
+      margin-top: 20px;
+      
+      img {
+        height: 150px;
+        width: 150px;
+        margin-left: 10px;
+      }
+    }
   
   }
 
