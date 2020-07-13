@@ -2,10 +2,14 @@
   新しいレシピをどんどん投稿しよう！
 
   = form_with model: @recipe, local: true do |f|
-    .image
-      -# %input.image-attached{:name => "file", :value => "画像を選択してください", :type => "file"}
-      画像をドラッグ＆ドロップで貼り付け
-    
+    .file_select
+      = f.label :images, "クリックして画像を選択してください。（最大３枚アップロードできます）", class: "file_select_label"
+      = f.file_field :images, multiple: true
+      = f.file_field :images, multiple: true
+      = f.file_field :images, multiple: true
+
+      .preview
+  
     .title
       %br
       = f.label :name, "レシピ名 必須"
