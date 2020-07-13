@@ -4,9 +4,9 @@
   = form_with model: @recipe, local: true do |f|
     .file_select
       = f.label :images, "クリックして画像を選択してください。（最大３枚アップロードできます）", class: "file_select_label"
-      = f.file_field :images, multiple: true, name:"recipe[images][0]"
-      = f.file_field :images, multiple: true, name:"recipe[images][1]"
-      = f.file_field :images, multiple: true, name:"recipe[images][2]"
+      = f.file_field :images, multiple: true
+      = f.file_field :images, multiple: true
+      = f.file_field :images, multiple: true
 
       .preview
   
