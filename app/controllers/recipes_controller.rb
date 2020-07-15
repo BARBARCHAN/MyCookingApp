@@ -1,10 +1,11 @@
 class RecipesController < ApplicationController
   def index
-   
+  
   end
 
   def show
-    @recipe = Recipe.with_attached_images.find(31)
+    # binding.pry
+    @recipe = Recipe.with_attached_images.find(params[:id])
   end
 
   def new
