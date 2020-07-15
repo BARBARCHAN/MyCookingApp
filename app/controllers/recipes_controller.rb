@@ -1,5 +1,10 @@
 class RecipesController < ApplicationController
   def index
+   
+  end
+
+  def show
+    @recipe = Recipe.with_attached_images.find(31)
   end
 
   def new
@@ -14,9 +19,6 @@ class RecipesController < ApplicationController
     # else
     #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
     # end
-  end
-
-  def show
   end
 
   private
