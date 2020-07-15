@@ -1,75 +1,76 @@
 .show
-  .images
-    .top-image
-      .sample
-      -# %img{:src => "./images/yakiudon.jpg"}
-    %br
-    .low-image
-      .sample2
+  - @recipe.images.each do |image|
+    .images
+      .top-image
+        .sample
+          = image_tag image.variant(resize: "150x150") 
       %br
-      .sample2
-      %br
-      .sample2
-      %br
-      .sample2
-  
-  .text
-    .title
-      簡単焼うどん
-
-    .separate-line
-
-    .materials
-      使用する材料
-    .material-list
-      .material
-        うどん（１人前）
-      .material
-        野菜（にんじん、ピーマン、たまねぎ）
-      .material
-        お肉（あるもの）
-      .material
-        たまご（１個、目玉焼き用）
-      .material
-        塩、コショー
-
-    .separate-line
-
-    .recipe
-      作り方
-    .references
-      元レシピ：
-      http://www.abc.def.com
+      .low-image
+        .sample2
+        %br
+        .sample2
+        %br
+        .sample2
+        %br
+        .sample2
     
-    .separate-line2
+    .text
+      .title
+        簡単焼うどん
 
-    .howto
-      作り方①：
-      うどんを解凍する。その間に野菜を切る。
-    
-    .separate-line2
-    
-    .howto
-      作り方②：
-      フライパンで野菜とお肉を炒める
-    
-    .separate-line2
+      .separate-line
 
-    .howto
-      作り方③：
-      野菜が炒まったら解凍したうどんをフライパンに入れる
-    
-    .separate-line2
+      .materials
+        使用する材料
+      .material-list
+        .material
+          うどん（１人前）
+        .material
+          野菜（にんじん、ピーマン、たまねぎ）
+        .material
+          お肉（あるもの）
+        .material
+          たまご（１個、目玉焼き用）
+        .material
+          塩、コショー
 
-    .howto
-      作り方④：
-      塩コショーで味付け
+      .separate-line
 
-    .separate-line2
+      .recipe
+        作り方
+      .references
+        元レシピ：
+        http://www.abc.def.com
+      
+      .separate-line2
 
-    .howto
-      作り方⑤：
-      目玉焼きを載せると美味しく見える
-    
-    .separate-line2
+      .howto
+        作り方①：
+        うどんを解凍する。その間に野菜を切る。
+      
+      .separate-line2
+      
+      .howto
+        作り方②：
+        フライパンで野菜とお肉を炒める
+      
+      .separate-line2
+
+      .howto
+        作り方③：
+        野菜が炒まったら解凍したうどんをフライパンに入れる
+      
+      .separate-line2
+
+      .howto
+        作り方④：
+        塩コショーで味付け
+
+      .separate-line2
+
+      .howto
+        作り方⑤：
+        目玉焼きを載せると美味しく見える
+      
+      .separate-line2
 
