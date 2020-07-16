@@ -4,8 +4,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    # binding.pry
-    @recipe = Recipe.with_attached_images.find(params[:id])
+  
   end
 
   def new
@@ -34,7 +33,7 @@ class RecipesController < ApplicationController
       :howto3,
       :howto4,
       :howto5,
-      images:[]
+      :image
     )
   end
 end
