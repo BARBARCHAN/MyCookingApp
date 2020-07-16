@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_07_11_230338) do
     t.string "name", null: false
     t.string "category", null: false
     t.text "material", null: false
+    t.text "source"
     t.text "howto1", null: false
     t.text "howto2", null: false
     t.text "howto3", null: false
