@@ -4,7 +4,8 @@ class RecipesController < ApplicationController
   end
 
   def show
-  
+    # binding.pry
+    @recipe = Recipe.find(params[:id])
   end
 
   def new
@@ -28,6 +29,7 @@ class RecipesController < ApplicationController
       :name,
       :category,
       :material,
+      :source,
       :howto1,
       :howto2,
       :howto3,
