@@ -4,3 +4,8 @@
     %input.btn{name: "submit", value: "検索", type: "submit"}
 
   .list
+    - @recipes.each do |recipe|
+      .image
+        = image_tag recipe.image.variant(resize: "200x200") 
+        .recipe-name
+          = recipe.name

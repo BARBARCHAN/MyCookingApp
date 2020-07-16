@@ -14,32 +14,14 @@
   }
 
   .list {
-    padding: 0 40px;
+    padding: 50px 40px;
+    margin: 0 auto;
 
-    .upper-list {
-      margin-top: 50px;
-      display: flex;
-      justify-content: space-between;
+    .image {
 
-      .list {
-        height: 200px;
-        width: 200px;
-        background-color: #C4C4C4;
-        border: solid 1px #111111;
-      }
-    }    
-
-    .lower-list {
-      margin-top: 50px;
-      display: flex;
-      justify-content: space-between;
-
-      .list {
-        height: 200px;
-        width: 200px;
-        background-color: #C4C4C4;
-        border: solid 1px #111111;
-      }
+    }
+    .recipe-name {
+      
     }
   }
 }
