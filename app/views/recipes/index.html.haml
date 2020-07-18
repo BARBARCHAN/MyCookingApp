@@ -2,10 +2,17 @@
   %form.search-form
     %input.search{name: "search", size: "40", type: "search", placeholder: "検索したい言葉を入力してください"}
     %input.btn{name: "submit", value: "検索", type: "submit"}
+  
+  .pick-up
+    最新の投稿
+  
+  %br
 
   .list
     - @recipes.each do |recipe|
-      .image
-        = image_tag recipe.image.variant(resize: "200x200") 
-        .recipe-name
-          = recipe.name
+      .upper-list
+        = link_to recipe_path(recipe) do
+          .image
+            = image_tag recipe.image.variant(combine_options:{resize:"185x185^",crop:"185x185+0+0",gravity: :center})
+            .recipe-name
+              = recipe.name
