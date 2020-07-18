@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-  
+    @recipes = Recipe.last(4)
   end
 
   def show

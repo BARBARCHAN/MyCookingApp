@@ -1,5 +1,12 @@
 .index {
   padding-top: 100px;
+  text-align: center;
+  // font-weight: bold;
+  background-color: #C4C4C4;
+  width: 850px;
+  height: 100vh;
+  margin: auto;
+  overflow: scroll;
 
   .search-form {
     text-align: center;
@@ -13,32 +20,29 @@
     }
   }
 
+  .pick-up {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 50px 0 30px 0;
+  }
+
   .list {
-    padding: 0 40px;
+    display: flex;
 
     .upper-list {
-      margin-top: 50px;
-      display: flex;
-      justify-content: space-between;
+      margin: auto;
+      display: inline-block;
 
-      .list {
-        height: 200px;
-        width: 200px;
-        background-color: #C4C4C4;
-        border: solid 1px #111111;
-      }
-    }    
+      a {
+        text-decoration: none;
+        color: black;
+  
+        .image {
 
-    .lower-list {
-      margin-top: 50px;
-      display: flex;
-      justify-content: space-between;
-
-      .list {
-        height: 200px;
-        width: 200px;
-        background-color: #C4C4C4;
-        border: solid 1px #111111;
+          .recipe-name {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
