@@ -19,4 +19,9 @@ $(function() {
     reader.readAsDataURL(imageFile);
     return def.promise();
   }
+
+  // var removeImaege {
+  //   $(.image-preview).on()
+  // }
+
 });
