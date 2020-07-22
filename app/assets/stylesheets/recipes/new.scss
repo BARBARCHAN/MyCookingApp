@@ -15,20 +15,29 @@
     margin: auto;
     // line-height: 300px;
 
+    .file-field {
+      margin-bottom: 10px;
+    }
+
     #recipe_images {
       // display: none;
     }
 
-    .preview {
-      margin-top: 20px;
-      
-      img {
-        height: 150px;
-        width: 150px;
-        margin-left: 10px;
+    .image-preview {
+      display: flex;
+      justify-content: center;
+
+      .preview {
+        margin-top: 20px;
+        
+        img {
+          height: 150px;
+          width: 150px;
+          margin-left: 10px;
+        }
       }
+
     }
-  
   }
 
   .categories {

@@ -56,3 +56,13 @@
       
       .separate-line2
 
+  - if user_signed_in? && current_user.id == @recipe.user_id
+    = link_to edit_recipe_path(@recipe) do
+      .btn
+        編集する
+    = link_to recipe_path(@recipe), method: :delete, data: { confirm: "本当に削除しますか？" } do
+      .btn
+        削除する
+
+  
+

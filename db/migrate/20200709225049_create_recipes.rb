@@ -15,6 +15,7 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.text :howto8
       t.text :howto9
       t.text :howto10
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
