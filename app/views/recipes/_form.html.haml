@@ -1,0 +1,60 @@
+= form_with model: @recipe, local: true do |f|
+  .file_select
+    = f.label :image, "クリックして画像を選択してください。（１枚のみアップロード可）", class: "file_select_label"
+    = f.file_field :image
+
+    .preview
+
+  .title
+    %br
+    = f.label :name, "レシピ名 ＜必須＞"
+    %br
+    = f.text_field :name, class: "recipe-name", size: "40", placeholder: "レシピ名を入力してください"
+  
+  %br
+
+  .categories
+    = f.label :category, "カテゴリーを選択してください ＜必須＞"
+    %br
+    = f.select :category, [["和食", 0], ["洋食", 1],["おつまみ", 2],["スイーツ", 3]]
+  
+  %br
+
+  .material
+    = f.label :material, "必要な材料と分量を入力してください ＜必須＞"
+    %br
+    = f.text_area :material, rows: "2", cols: "50", placeholder: "しょうゆ 大さじ２"
+
+  %br
+
+  .source
+    = f.label :source, "参照したレシピのURLを入力してください ＜任意＞"
+    %br
+    = f.text_field :source, class: "recipe-source", size: "50"
+
+  %br
+
+  .howto
+    レシピを入力してください
+    %br
+    = f.label :howto1
+    = f.text_area :howto1, rows: "2", cols: "50", placeholder: "レシピ1 必須"
+    %br
+    = f.label :howto2
+    = f.text_area :howto2, rows: "2", cols: "50", placeholder: "レシピ2 必須"
+    %br
+    = f.label :howto3
+    = f.text_area :howto3, rows: "2", cols: "50", placeholder: "レシピ3 必須"
+    %br
+    = f.label :howto4
+    = f.text_area :howto4, rows: "2", cols: "50", placeholder: "レシピ4"
+    %br
+    = f.label :howto5
+    = f.text_area :howto5, rows: "2", cols: "50", placeholder: "レシピ5"
+  
+  %br
+
+  .send-btn
+    = f.submit "登録する", class: "btn"
+
+

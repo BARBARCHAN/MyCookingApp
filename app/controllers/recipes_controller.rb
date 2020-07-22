@@ -1,11 +1,13 @@
 class RecipesController < ApplicationController
+
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+
   def index
     @recipes = Recipe.last(4)
   end
 
   def show
-    # binding.pry
-    @recipe = Recipe.find(params[:id])
+ 
   end
 
   def new
@@ -22,7 +24,24 @@ class RecipesController < ApplicationController
     # end
   end
 
+  def edit
+
+  end
+
+  def update
+    @recipe.update(recipe_params)
+  end
+
+  def destroy
+    @recipe.destroy
+  end
+
   private
+
+  def set_recipe
+    # binding.pry
+    @recipe = Recipe.find(params[:id])
+  end
 
   def recipe_params
     params.require(:recipe).permit(
@@ -36,6 +55,6 @@ class RecipesController < ApplicationController
       :howto4,
       :howto5,
       :image
-    )
+    ).merge(user_id: current_user.id)
   end
 end
