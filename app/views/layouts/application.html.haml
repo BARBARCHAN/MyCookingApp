@@ -14,7 +14,7 @@
       %ul.menus
         = link_to root_path do
           %li.menu トップ
-        = link_to "/recipes/1" do
+        = link_to  select_path do
           %li.menu レシピを見る
         - if user_signed_in?
           = link_to new_recipe_path do

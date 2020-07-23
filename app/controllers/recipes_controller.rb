@@ -36,9 +36,9 @@ class RecipesController < ApplicationController
     @recipe.destroy
   end
 
-  # def select_recipes
+  def select
 
-  # end
+  end
 
   private
 
