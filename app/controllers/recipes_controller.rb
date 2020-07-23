@@ -36,6 +36,10 @@ class RecipesController < ApplicationController
     @recipe.destroy
   end
 
+  # def select_recipes
+
+  # end
+
   private
 
   def set_recipe

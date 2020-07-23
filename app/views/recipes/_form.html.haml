@@ -3,11 +3,10 @@
     = f.label :image, "クリックして画像を選択してください。（１枚のみアップロード可）", class: "file_select_label"
     = f.file_field :image, class: "file-field"
     %br
-    .image-preview
-      - if @recipe.image.persisted?
-        = image_tag @recipe.image.variant(resize: "200x200"), class:"edit-preview"
-
-      .preview
+    .preview
+      .image-preview
+        - if @recipe.image.attached?
+          = image_tag @recipe.image.variant(resize: "200x200"), class:"edit-preview"
 
   .title
     %br
