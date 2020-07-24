@@ -5,10 +5,11 @@
 
   %br
 
+  投稿したレシピ一覧
   .list
     - @recipes.each do |recipe|
       = link_to recipe_path(recipe) do
         .image
           = image_tag recipe.image.variant(combine_options:{resize:"185x185^",crop:"185x185+0+0",gravity: :center})
-          .recipe-name
-            = recipe.name
+        .recipe-name
+          = recipe.name
