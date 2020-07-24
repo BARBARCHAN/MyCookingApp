@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   root "recipes#index"
   resources :recipes
-
   get 'select' => "recipes#select"
+
+  resources :users, only: :show
 end
