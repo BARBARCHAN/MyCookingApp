@@ -12,7 +12,7 @@ $(function() {
     var img = new Image();
     var def =$.Deferred();
     reader.onload = function(e){
-      $('.preview').append(img);
+      $('#preview').append(img);
       img.src = e.target.result;
       def.resolve(img);
     };
@@ -20,8 +20,9 @@ $(function() {
     return def.promise();
   }
 
-  // var removeImaege {
-  //   $(.image-preview).on()
-  // }
-
+  $("#preview").on("click", ".delete-btn", function(){
+    // 編集画面のイメージプレビュー下の削除ボタンが押されたらオリジナルのプレビューを消す
+    $(".edit-preview").remove();
+    $(".delete-btn").remove();
+  });
 });
