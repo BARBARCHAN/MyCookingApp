@@ -11,12 +11,14 @@
   .images {
 
     .top-image {
+      text-align: center;
 
-      .sample {
-        height: 265px;
-        width: 400px;
-        margin: auto;
+      img {
+        width: 50%;
+        height: auto;  
+        
       }
+     
     }
   }
 

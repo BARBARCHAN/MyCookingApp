@@ -1,8 +1,8 @@
 .show
   .images
     .top-image
-      .sample
-        = image_tag @recipe.image.variant(resize: "400x500") 
+      -# = image_tag @recipe.image.variant(resize: "400x500") 
+      = image_tag @recipe.image
       %br
     .text
       .title
