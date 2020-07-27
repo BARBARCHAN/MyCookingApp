@@ -6,7 +6,7 @@
   width: 850px;
   height: 100vh;
   margin: auto;
-  overflow: scroll;
+  // overflow: scroll;
 
   .title {
     font-size: 25px;
@@ -15,6 +15,7 @@
   .list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     a {
       text-decoration: none;
