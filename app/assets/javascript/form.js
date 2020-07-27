@@ -5,6 +5,8 @@ $(function() {
     $.each(files,function(i,file){
       d = d.then(function(){return previewImage(file)});
     });
+    // var html = `<div class="delete-btn">削除</div>`
+    //   $(".image-preview").append(html);
   })
 
   var previewImage = function(imageFile){
@@ -21,8 +23,8 @@ $(function() {
   }
 
   $("#preview").on("click", ".delete-btn", function(){
-    // 編集画面のイメージプレビュー下の削除ボタンが押されたらオリジナルのプレビューを消す
+    // var img = $(".image-preview img");
+    // $(".image-preview").remove(img);
     $(".edit-preview").remove();
-    $(".delete-btn").remove();
   });
 });
