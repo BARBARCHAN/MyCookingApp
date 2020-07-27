@@ -1,3 +1,23 @@
+// JavaScriptオンリーでプレビュー表記
+// document.addEventListener('DOMContentLoaded', function(){
+//   const ImageList = document.getElementById('preview')
+//   document.getElementById('file-field').addEventListener('change', function(e){
+//     const file = e.target.files[0];
+//     const blob = window.URL.createObjectURL(file);
+//     const imageElement = document.createElement('div')
+//     const blobImage = document.createElement('img')
+//     blobImage.setAttribute('src', blob)
+//     imageElement.appendChild(blobImage)
+//     ImageList.appendChild(imageElement)
+//   });
+
+//   document.getElementsByClassName('delete-btn').addEventListener('click', function(e) {
+//     const img = document.getElementsByClassName('image-preview img')
+//   });
+// });
+
+//jQueryを使ったプレビュー表記
+
 $(function() {
   $('.file_select').on('change',function(e){
     var files = e.target.files;
@@ -5,8 +25,6 @@ $(function() {
     $.each(files,function(i,file){
       d = d.then(function(){return previewImage(file)});
     });
-    // var html = `<div class="delete-btn">削除</div>`
-    //   $(".image-preview").append(html);
   })
 
   var previewImage = function(imageFile){
@@ -22,9 +40,8 @@ $(function() {
     return def.promise();
   }
 
+  // 編集画面でのオリジナル画像削除
   $("#preview").on("click", ".delete-btn", function(){
-    // var img = $(".image-preview img");
-    // $(".image-preview").remove(img);
     $(".edit-preview").remove();
   });
 });

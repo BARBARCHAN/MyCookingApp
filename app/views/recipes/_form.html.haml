@@ -1,7 +1,7 @@
 = form_with model: @recipe, local: true do |f|
   .file_select
     = f.label :image, "クリックして画像を選択してください。（１枚のみアップロード可）", class: "file_select_label"
-    = f.file_field :image, class: "file-field"
+    = f.file_field :image, id: "file-field"
     %br
     #preview
       .image-preview
