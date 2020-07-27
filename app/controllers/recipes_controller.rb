@@ -15,13 +15,13 @@ class RecipesController < ApplicationController
   end
 
   def create
-    Recipe.create(recipe_params)
-    # @image = Image.new(file_name: params[:file])
-    # if @image.save
-    #   render json: { message: "success", fileID: @image.id }, :status => 200
-    # else
-    #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
-    # end
+    @recipe = Recipe.create(recipe_params)
+    if @recipe.save
+      render :create
+    else
+      flash.now[:alert] = "内容を入力してください。"
+      render :new
+    end
   end
 
   def edit
