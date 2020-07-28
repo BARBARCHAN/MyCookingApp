@@ -37,7 +37,7 @@ class RecipesController < ApplicationController
   end
 
   def select
-
+    @recipes = Recipe.all.includes(:user)
   end
 
   private
