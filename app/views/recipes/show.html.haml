@@ -26,7 +26,7 @@
         作り方
       .references
         元レシピ：
-        http://www.abc.def.com
+        = @recipe.source
       
       .separate-line2
 
@@ -58,7 +58,11 @@
         作り方⑤：
         = @recipe.howto5
       
-      .separate-line2
+      .separate-line
+
+      .user-name
+        投稿者：
+        = @recipe.user.nickname
 
   - if user_signed_in? && current_user.id == @recipe.user_id
     = link_to edit_recipe_path(@recipe) do
