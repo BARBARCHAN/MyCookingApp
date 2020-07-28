@@ -1,11 +1,10 @@
 .select
-  カテゴリー別に最新の４件を一覧表示（工事中）
-  %ul.select-category
-    %li.japanese
-      和食
-    %li.western
-      洋食
-    %li.appetizers
-      おつまみ
-    %li.sweets
-      スイーツ
+  .list
+    - @recipes.each do |recipe|
+      .upper-list
+        = link_to recipe_path(recipe) do
+          .image
+            = image_tag recipe.image.variant(combine_options:{resize:"185x185^",crop:"185x185+0+0",gravity: :center})
+            .recipe-name
+              = recipe.name
+  
