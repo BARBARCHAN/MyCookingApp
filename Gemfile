@@ -67,3 +67,4 @@ gem 'pry-rails'
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'dropzonejs-rails'
+gem "aws-sdk-s3", require: false
