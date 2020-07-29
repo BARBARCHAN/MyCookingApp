@@ -5,6 +5,7 @@
   position: relative;
   // position: fixed;
   z-index: 500;
+  font-family: sans-serif ;
 
   .header-logo {
     text-align: center;
@@ -40,6 +41,7 @@
   width: 100vw;
   height: calc(100vh - 130px);
   overflow: auto;
+  font-family: sans-serif ;
 }
 
 .footer {
@@ -49,4 +51,5 @@
   text-align: center;
   line-height: 40px;
   font-size: 10px;
+  font-family: sans-serif ;
 }
