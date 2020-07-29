@@ -45,6 +45,14 @@
     }
   }
 
+  .title {
+    
+    .recipe-name {
+      height: 30px;
+      padding: 0 10px;
+    }
+  }
+
   .categories {
 
     #recipe_category {
@@ -53,16 +61,29 @@
     }
   }
 
+  .material {
+
+    .material-name {
+      padding: 5px 10px;
+    }
+  }
+
   .source {
 
     .recipe-source {
       height: 30px;
+      padding: 0 10px;
     }
   }
 
   .howto {
+
     label {
       display: none;
+    }
+
+    .howto {
+      padding: 5px 10px;
     }
   }
 
