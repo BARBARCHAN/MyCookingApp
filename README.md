@@ -11,7 +11,8 @@ My Cooking Memo
 https://mycookingapp.herokuapp.com/
 
 ## テスト用アカウント
-Email: test@test
+メールアドレス: test@test
+パスワード： abcd1234
 
 ## 利用方法
 
