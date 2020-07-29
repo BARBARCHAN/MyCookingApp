@@ -7,7 +7,22 @@
   height: 100vh;
   margin: auto;
   overflow: scroll;
-  padding: 100px 10px 30px;
+  padding: 50px 10px 30px;
+
+  .explanation {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: black;
+    background: #F8F0C9;/*背景色*/
+    border-top: solid 6px #FFEF9D;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+  }
 
   .search {
     padding-bottom: 20px;
@@ -31,7 +46,7 @@
   .pick-up {
     font-size: 30px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .list {

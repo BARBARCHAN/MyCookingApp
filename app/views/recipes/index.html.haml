@@ -1,8 +1,23 @@
 .index
+
+  .explanation
+    .title
+      このアプリの使い方
+    .letter
+      My Cooking Memoは調理したレシピを記録していくアプリです。
+    .letter
+      レシピの閲覧は誰でもできます。
+    .letter
+      レシピの投稿にはアカウントの作成が必要です。
+  
+  %br
+
   .search  
     = form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| 
       = f.text_field :keyword, placeholder: "レシピを検索する", class: "search-field" 
       = f.submit "検索", class: "btn"
+
+  %br
 
   .pick-up
     最新の投稿
