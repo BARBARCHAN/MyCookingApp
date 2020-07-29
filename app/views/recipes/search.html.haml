@@ -3,9 +3,9 @@
     = form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |f| 
       = f.text_field :keyword, placeholder: "レシピを検索する", class: "search-field" 
       = f.submit "検索", class: "btn"
-
+  
   .pick-up
-    最新の投稿
+    検索結果
   
   %br
 

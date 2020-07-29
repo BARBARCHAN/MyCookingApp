@@ -9,8 +9,14 @@ Rails.application.routes.draw do
     get 'users/select' => 'users/registrations#select'
   end
 
-  root "recipes#index"
-  resources :recipes
+  root "recipes#index" 
+  
+  resources :recipes do
+    collection do
+      get 'search'
+    end
+  end
+
   get 'select' => "recipes#select"
 
   resources :users, only: :show

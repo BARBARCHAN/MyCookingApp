@@ -40,10 +40,13 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.includes(:user)
   end
 
+  def search
+    @recipes = Recipe.search(params[:keyword])
+  end
+
   private
 
   def set_recipe
-    # binding.pry
     @recipe = Recipe.find(params[:id])
   end
 

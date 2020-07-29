@@ -4,4 +4,9 @@ class Recipe < ApplicationRecord
   belongs_to :user
 
   validates :name, :material, :howto1, :howto2, :howto3, presence: true
+
+  def self.search(search)
+    return Recipe.all unless search
+    Recipe.where('name LIKE(?)', "%#{search}%")
+  end
 end
