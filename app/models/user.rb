@@ -7,6 +7,7 @@ class User < ApplicationRecord
   
   has_one :sns_credential, dependent: :destroy
   has_many :recipes
+  has_many :comments
 
   validates :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[\w-]{6,128}+\z/i }
