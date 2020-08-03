@@ -71,6 +71,19 @@
     = link_to recipe_path(@recipe), method: :delete, data: { confirm: "本当に削除しますか？" } do
       .btn
         削除する
+  
+  .comments
+    - if current_user
+      = form_with model:[@recipe, @comment], local: true do |f|
+        = f.text_area :comment, class: "comment-form", placeholder: "コメントする"
+        %br
+        = f.submit "コメントを投稿する", class: "send-btn"
+    - else
+      .notification
+        コメントの投稿にはログインが必要です
+      
+
+
 
   
 

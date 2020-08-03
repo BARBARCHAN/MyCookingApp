@@ -7,7 +7,8 @@ class RecipesController < ApplicationController
   end
 
   def show
- 
+    # binding.pry
+    @comment = Comment.new
   end
 
   def new
