@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
   def show
     # binding.pry
     @comment = Comment.new
+    @comments = @recipe.comments
   end
 
   def new
