@@ -114,5 +114,40 @@
         background-color: #FFEF9D;
       }
     }  
+
+    .comments-list {
+      
+      
+
+      .comment-area {
+        background-color: white;
+        width: 450px;
+        margin: auto;
+
+        .comment-upper {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+  
+          .comment-user {
+            margin-right: 10px;
+            font-weight: bold;
+          }
+  
+          .comment-date {
+            font-size: 5px;
+          }
+        }
+  
+        .comment-lower {
+          margin: 10px 0 20px 0;
+          text-align: left;
+
+          .comment-text {
+            text-align: center;
+          }
+        }
+      }
+    }
   }
 }
