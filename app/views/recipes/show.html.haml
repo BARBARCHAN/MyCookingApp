@@ -75,10 +75,10 @@
   .comments
     .new-comment
       - if current_user
-        = form_with model:[@recipe, @comment], local: true do |f|
+        = form_with model:[@recipe, @comment], id: "post_comment", local: true do |f|
           = f.text_area :comment, class: "comment-form", placeholder: "コメントする"
           %br
-          = f.submit "コメントを投稿する", class: "send-btn"
+          = f.submit "コメントを投稿する", class: "comment-send-btn"
       - else
         .notification
           コメントの投稿にはログインが必要です

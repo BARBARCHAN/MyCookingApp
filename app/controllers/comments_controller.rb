@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   
   def create
     Comment.create(comment_params)
-    redirect_to root_path
+    # redirect_to root_path
   end
 
   private
