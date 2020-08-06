@@ -88,9 +88,9 @@
     .comments-list
       このレシピへのコメント
       %br
-      - if @comments
-        - @comments.each do |comment|
-          .comment-area
+      .comment-area
+        - if @comments
+          - @comments.each do |comment|
             .comment-upper
               .comment-user
                 = comment.user.nickname
@@ -99,10 +99,3 @@
             .comment-lower
               .comment-text
                 = comment.comment
-
-      
-
-
-
-  
-
