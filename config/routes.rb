@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   root "recipes#index" 
   
   resources :recipes do
-    resources :comments, only: :create
+    resources :comments, only: [:create, :edit, :update, :destroy]
     collection do
       get 'search'
     end
