@@ -71,6 +71,31 @@
     = link_to recipe_path(@recipe), method: :delete, data: { confirm: "本当に削除しますか？" } do
       .btn
         削除する
-
   
+  .comments
+    .new-comment
+      - if current_user
+        = form_with model:[@recipe, @comment], id: "post_comment", local: true do |f|
+          = f.text_area :comment, class: "comment-form", placeholder: "コメントする"
+          %br
+          = f.submit "コメントを投稿する", class: "comment-send-btn"
+      - else
+        .notification
+          コメントの投稿にはログインが必要です
 
+    %br
+
+    .comments-list
+      このレシピへのコメント
+      %br
+      .comment-area
+        - if @comments
+          - @comments.each do |comment|
+            .comment-upper
+              .comment-user
+                = comment.user.nickname
+              .comment-date
+                = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+            .comment-lower
+              .comment-text
+                = comment.comment

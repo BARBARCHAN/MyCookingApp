@@ -7,7 +7,9 @@ class RecipesController < ApplicationController
   end
 
   def show
- 
+    # binding.pry
+    @comment = Comment.new
+    @comments = @recipe.comments.includes(:user)
   end
 
   def new
