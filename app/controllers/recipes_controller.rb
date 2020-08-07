@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   def show
     # binding.pry
     @comment = Comment.new
-    @comments = @recipe.comments.includes(:user).order("created_at DESC")
+    @comments = @recipe.comments.includes(:user)
   end
 
   def new

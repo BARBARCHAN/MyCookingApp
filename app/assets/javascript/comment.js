@@ -2,7 +2,6 @@ $(function() {
 
   function buildHTML(comment){
     var html = `
-      <div class="comment-area">
         <div class="comment-upper">
           <div class="comment-user">
             ${comment.user_nickname}
@@ -15,8 +14,7 @@ $(function() {
           <div class="comment-text">
             ${comment.comment}
           </div>
-        </div>
-      </div>`
+        </div>`
     return html;
   }
 
